@@ -1,25 +1,24 @@
 LIB = ./Includes
 PRE = ./
 
-SOURCE = main.cpp phone_book.cpp
+SOURCE = main.cpp phone_book.cpp contact.cpp
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 
 NAME = phonebook
 
-CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
-RD_LINE_FLAG = -lreadline
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBJ = $(SOURCES:.c=.o)
+OBJ = $(SOURCES:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-.c.o:
-	$(CC) $(FLAGS) -I $(LIB) -c $< -o $(<:.c=.o)
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -I $(LIB) -c $< -o $@
 
 clean: 
 	rm -f $(OBJ)
