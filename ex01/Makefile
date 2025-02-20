@@ -8,7 +8,7 @@ SOURCES = ${addprefix $(PRE), $(SOURCE)}
 NAME = phonebook
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 OBJ = $(SOURCES:.cpp=.o)
 

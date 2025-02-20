@@ -6,16 +6,17 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 21:43:14 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/19 22:44:10 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/02/20 22:06:55 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Includes/Contact.hpp"
+#include "./Includes/includes.hpp"
 
 
 static int	get_input(std::string msg, std::string *param) {
 	std::cout << msg;
-	std::cin >> *param;
+	if (!(std::cin >> *param))
+		exit(1);
 	if ((*param).length() == 0)
 		return (1);
 	return (0);

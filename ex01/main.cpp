@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:15:31 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/19 21:41:23 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/02/20 22:06:59 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Enter a command (ADD, SEARCH or EXIT): ";
-		std::cin >> cmd;
+		if (!(std::cin >> cmd))
+			exit(1);
 		if (cmd.compare("ADD") == 0)
 			phone_book.add();
 		else if (cmd.compare("SEARCH") == 0)
