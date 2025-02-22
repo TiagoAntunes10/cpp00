@@ -6,20 +6,20 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 12:09:48 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/02 21:51:20 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/02/22 16:16:53 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
+#include <stdio.h>
 
 inline static void	putstr_upper(std::string argv)
 {
-	int	i;
+	long unsigned int	i;
 
 	i = 0;
 	while (i < argv.length())
-		std::cout << (char) toupper(argv[i++]);
+		putchar(toupper(argv[i++]));
 }
 
 int	main(int argc, char **argv)

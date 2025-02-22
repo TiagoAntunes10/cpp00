@@ -1,7 +1,7 @@
 LIB = ./Includes
 PRE = ./
 
-SOURCE = main.cpp phone_book.cpp contact.cpp
+SOURCE = main.cpp PhoneBook.cpp Contact.cpp
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 

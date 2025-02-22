@@ -1,24 +1,24 @@
+LIB = ./
 PRE = ./
 
-SOURCE = megaphone.c
+SOURCE = megaphone.cpp
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 
 NAME = megaphone
 
-CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
-RD_LINE_FLAG = -lreadline
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBJ = $(SOURCES:.c=.o)
+OBJ = $(SOURCES:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean: 
 	rm -f $(OBJ)
