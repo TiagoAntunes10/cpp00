@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:15:58 by tialbert          #+#    #+#             */
-/*   Updated: 2025/03/04 12:19:35 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 22:54:46 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	PhoneBook::add(void)
 {
-	contact[index].create();
+	if (contact[index].create() == 1)
+		return ;
 	if (index == 7)
 		index = 0;
 	else

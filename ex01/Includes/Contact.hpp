@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:07:07 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/19 22:41:42 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 22:55:13 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Contact {
 
 	public:
-		void		create(void);
+		int			create(void);
 		std::string	get_first_name(void);
 		std::string get_last_name(void);
 		std::string	get_nickname(void);

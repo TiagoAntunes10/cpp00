@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 21:43:14 by tialbert          #+#    #+#             */
-/*   Updated: 2025/03/04 12:19:02 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 22:55:36 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,32 @@ static int	get_input(std::string msg, std::string *param) {
 
 }
 
-void	Contact::create(void) {
+int	Contact::create(void) {
 	if (get_input("First name: ", &first_name) == 1)
-		return ;
+		return (1);
 	if (get_input("Last name: ", &last_name) == 1) {
 		first_name.erase();
-		return ;
+		return (1);
 	}
 	if (get_input("Nickname: ", &nickname) == 1) {
 		first_name.erase();
 		last_name.erase();
-		return ;
+		return (1);
 	}
 	if (get_input("Phone number: ", &phone_number) == 1) {
 		first_name.erase();
 		last_name.erase();
 		nickname.erase();
-		return ;
+		return (1);
 	}
 	if (get_input("Darkest secret: ", &dark_secret) == 1) {
 		first_name.erase();
 		last_name.erase();
 		nickname.erase();
 		phone_number.erase();
-		return ;
+		return (1);
 	}
+	return (0);
 }
 
 std::string	Contact::get_first_name(void) {
