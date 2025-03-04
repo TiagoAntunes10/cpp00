@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.cpp                                     :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:15:58 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/20 22:09:17 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:19:35 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Includes/includes.hpp"
-
-int	PhoneBook::index = 0;
 
 void	PhoneBook::add(void)
 {
@@ -59,7 +57,7 @@ void	PhoneBook::search(void) {
 	}
 
 	std::cout << "Select the contact index to display: ";
-	if (!(std::cin >> answer))
+	if (!(std::getline(std::cin, answer)))
 		exit(1);
 	if (answer.length() > 1 || answer.length() == 0) {
 		std::cout << "Invalid value" << std::endl;
@@ -71,4 +69,8 @@ void	PhoneBook::search(void) {
 		return ;
 	}
 	contact[num].show_info();
+}
+
+PhoneBook::PhoneBook ( void ) {
+	index = 0;
 }

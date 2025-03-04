@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:43:06 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/19 21:39:27 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:07:42 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 class PhoneBook {
 
 	private:
-		Contact		contact[8];
-		static int	index;
-		void		write_contact(int i);
+		Contact	contact[8];
+		int		index;
+		void	write_contact( int i );
 
 	public:
-		void		add();
-		void		search();
+		void	add();
+		void	search();
+		PhoneBook ( void );
 };
 
 #endif

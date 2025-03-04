@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 21:43:14 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/20 22:06:55 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:19:02 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	get_input(std::string msg, std::string *param) {
 	std::cout << msg;
-	if (!(std::cin >> *param))
+	if (!(std::getline(std::cin, *param)))
 		exit(1);
 	if ((*param).length() == 0)
 		return (1);

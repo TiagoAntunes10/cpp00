@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 12:09:48 by tialbert          #+#    #+#             */
-/*   Updated: 2025/02/22 16:16:53 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/03/04 12:02:58 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ inline static void	putstr_upper(std::string argv)
 
 	i = 0;
 	while (i < argv.length())
-		putchar(toupper(argv[i++]));
+		std::cout << (char) toupper(argv[i++]);
 }
 
 int	main(int argc, char **argv)
